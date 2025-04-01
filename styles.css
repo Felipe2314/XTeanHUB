@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: black;
 }
 
 
@@ -12,7 +13,12 @@ body {
 
 
 
-
+.content {
+    margin-top: 60px; /* Essa margem empurra o conteúdo para baixo */
+    padding: 20px;
+    background-color: lightgray;
+    height: 100px; /* Apenas para criar rolagem e testar */
+}
 
 #header {
     display: flex;
@@ -23,6 +29,8 @@ body {
     align-items: center;
     justify-content: space-between ;
     border-bottom: 2px solid orange; /* Linha laranja */
+    position: fixed;
+    
 }
 
 
@@ -34,7 +42,7 @@ body {
 
 #nav {
     display: flex;
-    gap: 200px;
+    gap: 120px;
     margin: 20px;
 }
 
@@ -74,7 +82,23 @@ button:hover::after {
 }
 
 
-
-
-
-
+.grafico1 {
+    width: 80%; /* Ajustável */
+            max-width: 1000px; /* Define um tamanho máximo */
+            background-color: rgb(0, 0, 0); /* Dá um fundo ao gráfico */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+}
+.chart-label img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+canvas {
+    background-color: black; /* Deixa o fundo do gráfico preto */
+    border-radius: 10px;
+}
