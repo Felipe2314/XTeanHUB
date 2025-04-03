@@ -34,16 +34,49 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    
+    // Gráfico de Horas Jogadas com Amigos
+    const ctx2 = document.getElementById("myFriendsChart");
+    if (ctx2) {
+        new Chart(ctx2, {
+            type: "bar",
+            data: {
+                labels: [
+                    "Minecraft",
+                    "Cuphead",
+                    "Reppo",
+                    "Left 4 Dead 2",
+                    "Among Us",
+                    "Dragon Ball Sparking 0",
+                ],
+                datasets: [
+                    {
+                        label: "Horas Jogadas com Amigos",
+                        data: [5200, 3100, 4200, 3900, 4500, 4800],
+                        borderWidth: 1,
+                        backgroundColor: "rgba(255, 165, 0, 0.8)",
+                        borderColor: "rgba(255, 140, 0, 1)",
+                        barThickness: "flex",
+                    },
+                ],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { beginAtZero: true, max: 6000 },
+                },
+            },
+        });
+    }
 
     // Dados do ranking
     let registros = [
-        { nome: "Felipe", jogo: "Minecraft", horas: 100 },
-        { nome: "Galvao", jogo: "GTA V", horas: 15 },
-        { nome: "Samuel", jogo: "Valorant", horas: 8 },
+        { nome: "Felipe", jogo: "FIFA 24", horas: 10 },
+        { nome: "Samuel", jogo: "GTA V", horas: 15 },
+        { nome: "Galvao", jogo: "Valorant", horas: 8 },
         { nome: "Lael", jogo: "Minecraft", horas: 12 },
         { nome: "Felipe", jogo: "Elden Ring", horas: 9 },
-        { nome: "Galvao", jogo: "Fortnite", horas: 14 },
+        { nome: "Samuel", jogo: "Fortnite", horas: 14 },
     ];
 
     function atualizarTabela() {
@@ -63,20 +96,16 @@ document.addEventListener("DOMContentLoaded", function () {
         atualizarGrafico();
     }
 
-    function adicionarHoras() {  // ⬅️ Nome corrigido
-        console.log("Botão foi clicado!"); // Verifica se a função está sendo chamada
-
+    function adicionarHoras() {
         let randomIndex = Math.floor(Math.random() * registros.length);
         registros[randomIndex].horas += Math.floor(Math.random() * 5) + 1;
         atualizarTabela();
     }
 
-    // Criando o gráfico
-    const ctx2 = document.getElementById("graficoHoras");
-    let grafico;
-
-    if (ctx2) {
-        grafico = new Chart(ctx2.getContext("2d"), {
+    // Verifica se existe o gráfico antes de criar
+    const ctx3 = document.getElementById("graficoHoras");
+    if (ctx3) {
+        let grafico = new Chart(ctx3.getContext("2d"), {
             type: "bar",
             data: {
                 labels: registros.map((r) => `${r.nome} - ${r.jogo}`),
@@ -93,14 +122,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 scales: { y: { beginAtZero: true } },
             },
         });
-    }
 
-    function atualizarGrafico() {
-        if (!grafico) return; // ⬅️ Evita erro caso o gráfico não exista
-
-        grafico.data.labels = registros.map((r) => `${r.nome} - ${r.jogo}`);
-        grafico.data.datasets[0].data = registros.map((r) => r.horas);
-        grafico.update();
+        function atualizarGrafico() {
+            grafico.data.labels = registros.map((r) => `${r.nome} - ${r.jogo}`);
+            grafico.data.datasets[0].data = registros.map((r) => r.horas);
+            grafico.update();
+        }
     }
 
     atualizarTabela();
