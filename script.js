@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
             data: {
                 labels: [
                     "Red Dead Redemption 2",
-                    "CS:GO 2",
+                    "CS2",
                     "FORZA 5",
                     "CYBERPUNK",
                     "Assassins Creed Shadows",
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { nome: "Felipe", jogo: "FIFA 24", horas: 10 },
         { nome: "Samuel", jogo: "GTA V", horas: 15 },
         { nome: "Galvao", jogo: "Valorant", horas: 8 },
-        { nome: "Lael", jogo: "Minecraft", horas: 12 },
+        { nome: "Lael", jogo: "Counter Strike 2", horas: 12 },
         { nome: "Felipe", jogo: "Elden Ring", horas: 9 },
         { nome: "Samuel", jogo: "Fortnite", horas: 14 },
     ];
