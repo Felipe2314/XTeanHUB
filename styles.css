@@ -15,6 +15,52 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* Estiliza o bloco de perfil */
+#perfil-container {
+    width: 35vw; 
+    height: 75px; 
+    background-color: #222; 
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px orange; 
+    margin-top: 120px;
+}
+
+/* Estiliza a imagem */
+#perfil-container img {
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-right: 20px; 
+}
+
+/* Estiliza o nome e informações */
+#perfil-info {
+    color: white;
+}
+
+#perfil-info h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+#perfil-info p {
+    font-size: 16px;
+    margin-top: 5px;
+    color: #ccc; /* Cor cinza para descrição */
+}
+
+
+#container-perfil img {
+    width: 150px; /* Largura */
+    height: 150px; /* Altura */
+    border-radius: 50%; /* Deixa redondo (se for um perfil) */
+    object-fit: cover; /* Ajusta a imagem dentro do tamanho sem distorcer */
+}
+
 #header {
     display: flex;
     flex-direction: row;
@@ -37,7 +83,7 @@ body {
     padding: 10px;
 }
 
-#header img {
+
 #header img {
     width: 300px;
     height: auto;
@@ -51,7 +97,7 @@ body {
     margin-right: 20px;
 }
 
-#nav button {
+
 #nav button {
     background-color: transparent;
     border: none;
@@ -145,5 +191,73 @@ canvas {
 .carousel-item img {
     width: 100%; 
     height: 500px; /* Ajuste conforme necessário */
+    
+}
+
+/* Botão */
+button {
+    background-color: orange;
+    color: black;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: darkorange;
+}
+
+/* Layout flexível para tabela e gráfico */
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Tabela de ranking */
+table {
+    width: 45%;
+    border-collapse: collapse;
+    color: white;
+    font-size: 18px;
+    background-color: rgba(255, 165, 0, 0.1);
+}
+
+th, td {
+    border: 2px solid orange;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: orange;
+    color: black;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgba(255, 165, 0, 0.2);
+}
+
+/* Gráfico */
+.grafico-container {
+    width: 45%;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+#Area-de-info {
+    width: 100px; 
+    height: 100px;
+    background-color: black;
+    box-shadow: 0px 0px 10px orange; /* Brilho sutil */
+    margin-top: 50px;
     
 }
