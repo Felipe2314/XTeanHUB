@@ -26,6 +26,7 @@ body {
     top: 0;
     left: 0;
     padding: 10px;
+    z-index: 2;
 
 }
 
@@ -74,6 +75,7 @@ body {
     left: 85%;
     transform: translateX(-50%);
     top: 20px;
+    z-index: 2;
 }
 
 /* Estiliza a imagem */
@@ -175,9 +177,7 @@ canvas {
     height: 500px;     
     margin: 120px auto 50px auto; 
     overflow: hidden;   
-    box-shadow: 0 0 15px rgba(255, 111, 0, 0.8);
-    position: relative; 
-    z-index: 1; 
+    box-shadow: 0 0 15px rgba(255, 111, 0, 0.8); 
 }
 
 /* Ajuste para garantir que as imagens preencham corretamente */
@@ -200,6 +200,7 @@ button {
     border: none;
     cursor: pointer;
     margin-top: 20px;
+    
 }
 
 button:hover {
