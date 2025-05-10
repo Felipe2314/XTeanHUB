@@ -1,3 +1,6 @@
-from django.shortcuts import render
+# dashboard/views.py
 
-# Create your views here.
+from django.http import HttpResponse
+
+def index(request):
+    return HttpResponse("Bem-vindo ao Dashboard!")
