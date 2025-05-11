@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+
+body {
+    background-color: black !important;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+#header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid orange;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 2;
+
+}
+
+
+#header img {
+    width: 300px;
+    height: auto;
+}
+
+
+#nav {position: fixed; top: 0; width: 100%;}
+/* ↓ eu só subistitui o margin por text-align:center na linha abaixo ↓ */
+#nav ul {font-size: 50px; text-align:center; }
+#nav ul li {display: inline; margin: 0 0 0 15px;}
+#nav ul li a {margin: 0 auto;}
+    
+
+
+
+#nav #button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+#nav #button:hover {
+    color: orange;
+}
+
+/* Estiliza o bloco de perfil */
+#perfil-container {
+    width: 28vw; 
+    height: 4vw;  
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px orange; 
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    left: 85%;
+    transform: translateX(-50%);
+    top: 20px;
+    z-index: 2;
+}
+
+/* Estiliza a imagem */
+#perfil-container img {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-right: 20px;
+    margin-left: 0%; 
+}
+
+/* Estiliza o nome e informações */
+#perfil-info {
+    color: white;
+}
+
+#perfil-info h2 {
+    font-size: 15px;
+    margin: 20px 0 2px 0;
+}
+
+#perfil-info p {
+    font-size: 10px;
+    margin-top: 3px;
+    color: #ccc; /* Cor cinza para descrição */
+}
+
+
+#container-perfil img {
+    width: 150px; /* Largura */
+    height: 150px; /* Altura */
+    border-radius: 50%; /* Deixa redondo (se for um perfil) */
+    object-fit: cover; /* Ajusta a imagem dentro do tamanho sem distorcer */
+}
+
+.grafico1 {
+    width: 80%;
+    max-width: 1000px;
+    height: 500px;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 111, 0, 0.8);
+
+    /* Centralizando lindamente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* CENTRALIZA HORIZONTALMENTE */
+    text-align: center;
+}
+
+
+canvas {
+    background-color: black;
+    border-radius: 10px;
+    width: 100% !important;
+    height: 100% !important; /* Faz o gráfico ocupar toda a altura do container */
+}
+
+.grafico2 {
+    width: 80%;
+    max-width: 1000px;
+    height: 500px;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 111, 0, 0.8);
+
+    /* Centralizando igual ao primeiro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#myFriendsChart {
+    background-color: black;
+    border-radius: 10px;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+
+#painel-de-info {
+    text-align: center;
+    margin-top: 120px;
+    color: white;
+}
+
+
+
+#carouselExampleAutoplaying {
+    width: 80%;
+    max-width: 350px;
+    height: 500px;     
+    margin: 120px auto 50px auto; 
+    overflow: hidden;   
+    box-shadow: 0 0 15px rgba(255, 111, 0, 0.8); 
+}
+
+/* Ajuste para garantir que as imagens preencham corretamente */
+.carousel-inner {
+    height: 100%; 
+}
+
+.carousel-item img {
+    width: 100%; 
+    height: 500px; /* Ajuste conforme necessário */
+    
+}
+
+/* Botão */
+button {
+    background-color: orange;
+    color: black;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    
+}
+
+button:hover {
+    background-color: darkorange;
+}
+
+/* Layout flexível para tabela e gráfico */
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Tabela de ranking */
+table {
+    width: 45%;
+    border-collapse: collapse;
+    color: white;
+    font-size: 18px;
+    background-color: rgba(255, 165, 0, 0.1);
+}
+
+th, td {
+    border: 2px solid orange;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: orange;
+    color: black;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgba(255, 165, 0, 0.2);
+}
+
+/* Gráfico */
+.grafico-container {
+    width: 45%;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+#Area-de-info {
+    width: 100px; 
+    height: 100px;
+    background-color: black;
+    box-shadow: 0px 0px 10px orange; /* Brilho sutil */
+    margin-top: 50px;
+    
+}
+
+::-webkit-scrollbar {
+    width: 5.3px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: orange; 
+    border-radius: 10px;
+  }
+
+  @media (max-width: 768px) {
+    #perfil-container {
+      width: 90vw;
+      left: 50%;
+      transform: translateX(-50%);
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
+    }
+  
+    #perfil-container img {
+      margin-bottom: 10px;
+    }
+  }
